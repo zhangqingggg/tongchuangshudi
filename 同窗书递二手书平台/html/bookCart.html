@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车</title>
+
+    <!-- 链接外部CSS文件 -->
+    <link rel="stylesheet" href="../css/bookCartStyle.css">
+
+    <!-- 引入多个外部js文件 -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/shoppingCart.js"></script>
+</head>
+<body>
+    <div class="header">
+        <p class="left">当前您的位置：购物车</p>
+
+        <!-- 使用多个类选择器中的样式 -->
+        <p class="choice right">已选商品种类：
+            <span class="totalNum">0</span>
+        </p>
+    </div>
+    <table class="tableItem">
+        <tr>
+            <th>
+                <input type="checkbox" name="checkAll">全选
+            </th>
+            <!--<th>图片</th>-->
+            <th>商品名称</th>
+            <th>单价</th>
+            <th>数量</th>
+            <th>小计</th>
+            <th>操作</th>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="ch">
+            </td>
+            <!--<td>
+                <img src="../images/htmlcssjs.jpg" alt="htmlcssjs">
+            </td>-->
+            <td>
+                《HTML+CSS+JavaScript网页设计》
+            </td>
+            <td>
+                <span class="unitPrice">39</span>
+            </td>
+            <td>
+                <button class="minusBtn">-</button>
+                <span class="tempNum">1</span>
+                <button class="addBtn">+</button>
+            </td>
+            <td>
+                <span class="tempPrice">39</span>元
+            </td>
+            <td>
+                <button class="deleteBtn">删除</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="ch">
+            </td>
+            <!--<td>
+                <img src="../images/软件工程.jpg" alt="软件工程">
+            </td>-->
+            <td>
+                《软件工程》
+            </td>
+            <td>
+                <span class="unitPrice">39</span>
+            </td>
+            <td>
+                <button class="minusBtn">-</button>
+                <span class="tempNum">1</span>
+                <button class="addBtn">+</button>
+            </td>
+            <td>
+                <span class="tempPrice">39</span>元
+            </td>
+            <td>
+                <button class="deleteBtn">删除</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" name="ch">
+            </td>
+            <!--<td>
+                <img src="../images/vue.jpg" alt="vue">
+            </td>-->
+            <td>
+                《Veu.js 3.x从入门到实战》
+            </td>
+            <td>
+                <span class="unitPrice">59</span>
+            </td>
+            <td>
+                <button class="minusBtn">-</button>
+                <span class="tempNum">1</span>
+                <button class="addBtn">+</button>
+            </td>
+            <td>
+                <span class="tempPrice">59</span>元
+            </td>
+            <td>
+                <button class="deleteBtn">删除</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5"></td>
+            <td>
+                合计：<span class="totalPrice">0</span>元
+            </td>
+            <td>
+                <button class="calBtn" onclick="confirm('你确定要结算吗？')">去结算</button>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

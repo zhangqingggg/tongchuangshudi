@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图书修改</title>
+    <link href="../css/controls.css"
+    rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+    function setvalue(){
+        var contents=window.Document.getElementById("catalog");
+        contents.value="第一章软件工程基本概念\n"+"第二章可行性研究\n"+"第三章需求分析\n"+
+        "第四章概要设计\n"+"第五章详细设计\n"+"第六章编码与测试\n"+"第七章维护\n"+"第八章面向对象方法\n"
+        +"第九章软件项目管理\n"+"第十章软件工程实验";
+    }
+    function validate() {
+        var bookName=window.document.frmBookUpdate.txtBookName.value;
+        if(bookName =="" || bookName == null){
+            window.alert("请输入书名！");
+            window.document.frmBookUpdate.txtBookName.focus();
+            return false;
+        }
+        var author=window.document.frmBookUpdate.txtAuthor.value;
+        if(author=="" || author == null){
+            window.alert("请输入作者名字！");
+            window.document.frmBookUpdate.txtAuthor.focus();
+            return false;
+        }
+        alert("修改成功！");
+        return true;
+    }
+</script>
+</head>
+<body class="bg" onloaad="setvalue()">
+    <div>
+        <form name="frmBookUpdate" method="post">
+            <table border="1" align="center"
+                width="600" height="200">
+            <caption>
+                <h3>图书修改</h3>
+            </caption>
+            <tr>
+                <td width="20%">ISBN:</td>
+                <td width="*">
+                    <input type="text" name="txtIsbn"
+                        size="18" readonly 
+                        value="978-7-302-47285-8">
+                </td>
+            </tr>
+            <tr>
+                <td>书名：</td>
+                <td>
+                    <input type="text" name="txtBookName"
+                        size="50" maxlength="50"
+                        value="软件工程">
+                    <span style="color:red;font-size: 20px;">*</span>
+                </td>
+            </tr>
+            <tr>
+                <td>作者：</td>
+                <td>
+                    <input type="text" name="txtAuthor"
+                        size="30" maxlength="30"
+                        value="陈恒等">
+                    <span style="color:red;font-size: 20px;">*</span>
+                </td>
+            </tr>
+            <tr>
+                <td>定价:</td>
+                <td>
+                <input type="number" name="price" 
+                min="0" max="1000" value="39">(人民币：元)
+                </td>
+            </tr>
+            <tr>
+                <td>出版日期：</td>
+                <td>
+                    <input type="date" name="publishDate"
+                    value="2017-07-01">
+                </td>
+            </tr>
+            <tr>
+                <td>出版社：</td>
+                <td>
+                    <select name="publisher">
+                        <option value="0"></option>
+                        <option value="1" selected>清华大学出版社</option>
+                        <option value="2">人民教育出版社</option>
+                        <option value="3">外语教学与研究出版社</option>
+                        <option value="4">机械工业出版社</option>
+                        <option value="5">海燕出版社</option>
+                        <option value="6">其他</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>封皮:</td>
+                <td>
+                    <img src="../image/软件工程.jpg"
+                    width="20%" alt="软件工程"
+                    title="软件工程">
+                </td>
+            </tr>
+            <tr>
+                <td>目录：</td>
+                <td>
+                    <textarea name="catalog" id="catalog" cols="60"
+                    rows="8">
+                    第一章:软件工程基本概念
+                    第二章:可行性研究
+                    第三章:需求分析
+                    第四章:概要设计
+                    第五章:详细设计
+                    第六章:编码与测试
+                    第七章:维护
+                    第八章:面向对象方法
+                    第九章:软件项目管理
+                    第十章:软件工程实验
+                    </textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" name="btnUpdate"
+                    value="修改" onclick="validate()">
+                    <input type="reset" name="btnReset"
+                    value="重置">
+                </td>
+            </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

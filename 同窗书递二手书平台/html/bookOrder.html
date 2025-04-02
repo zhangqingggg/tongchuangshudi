@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>图书订单</title>
+    <style type="text/css">
+        table{
+            font:size 16px;
+            border-collapse: collapse;
+            border-width: 3px;
+            width:1000px;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body background="../image/纯色.jpg">
+    <form name="frmOrder">
+        <table border="1" bordercolor="#8B6914" align="center"
+        cellspacing="2" cellpadding="3">
+        <caption>
+            <h2>图书订单</h2>
+        </caption>
+        <tr bgcolor="#c8cfc4" align="center">
+            <th width="6%">订单编号</th>
+            <th width="24%">商品名</th>
+            <th width="5%">数量</th>
+            <th width="10%">总金额</th>
+            <th width="10%">购买人</th>
+            <th width="20%">收货地址</th>
+            <th width="10%">订单时间</th>
+            <th width="*">操作</th>
+        </tr>
+        <tr align="center">
+            <td>1</td>
+            <td>HTML+CSS+Jvascript网页设计</td>
+            <td>2</td>
+            <td>78.00</td>
+            <td>张三</td>
+            <td>辽宁省阜新市</td>
+            <td>2024-6-20</td>
+            <td>
+                <a href="bookOrder.html" onClick="alert('已发货！')">发货</a>&nbsp;&nbsp;
+                <a href="bookOrder.html" onClick="alert('已退回！')">退回</a>
+            </td>
+        </tr>
+        <tr align="center">
+            <td>2</td>
+            <td>软件工程</td>
+            <td>2</td>
+            <td>39.00</td>
+            <td>李四</td>
+            <td>辽宁省大连市</td>
+            <td>2024-6-29</td>
+            <td>
+                <a href="bookOrder.html" onClick="alert('已发货！')">发货</a>&nbsp;&nbsp;
+                <a href="bookOrder.html" onClick="alert('已退回！')">退回</a>
+            </td>
+        </tr>
+        </table>
+    </br>
+    <a href="index.html" target="_blank">返回主页</a>
+        </form>
+        </body>
+        </html>

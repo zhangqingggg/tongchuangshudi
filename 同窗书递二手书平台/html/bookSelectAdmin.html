@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图书信息查询（管理员）</title>
+    <link href="../css/hyper.css"
+     type="text/css">
+     <style type="text/css">
+        iframe{
+            border:none;
+            width:1200px;
+            height:500px;
+        }
+        #custom{
+            display:flex;
+            justify-content:center;
+        }
+      </style>  
+</head>
+<body class="bg">
+    <div>
+        <form name="frmBookSelectAdmin">
+            <table border="3" align="center"
+                width="600" height="200">
+            <caption>
+                <h3>图书信息查询（管理员）</h3>
+            </caption>
+            <tr>
+                <td width="20%">书名：</td>
+                <td width="*">
+                    <input type="text" name="txtBookName"
+                        size="50" maxlength="50" >
+                </td>
+            </tr>
+            <tr>
+                <td>作者：</td>
+                <td>
+                    <input type="text" name="txtAuthor"
+                        size="30" maxlength="30">
+                </td>
+            </tr>
+            <tr>
+                <td>定价:</td>
+                <td>
+                <input type="number" name="price1" 
+                min="0" max="1000"> ~
+                <input type="number" name="price2" 
+                min="0" max="1000">(人民币：元)
+                </td>
+            </tr>
+            <tr>
+                <td>出版社：</td>
+                <td>
+                    <select name="publisher">
+                        <option value="0"></option>
+                        <option value="1">清华大学出版社</option>
+                        <option value="2">人民教育出版社</option>
+                        <option value="3">外语教学与研究出版社</option>
+                        <option value="4">机械工业出版社</option>
+                        <option value="5">海燕出版社</option>
+                        <option value="6">其他</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <a href="bookResultAdmin.html" target="result">
+                        查询
+                    </a>
+                </td>
+            </tr>
+            </table>
+            </form>
+            </div>
+            <div id="custom">
+                <iframe name="result"></iframe>
+            </div>
+            </body>
+            </html>

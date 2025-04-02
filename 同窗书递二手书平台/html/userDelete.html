@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>用户信息</title>
+    <link href="../css/controls.css" rel="stylesheet"
+    type="text/css">
+    <style type="text/css">
+        table{
+            font:size 16px;
+            border-collapse: collapse;
+            border-width: 3px;
+            width:1000px;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/common.js"></script>
+</head>
+</head>
+<body background="../image/纯色.jpg">
+    <form name="resultUser">
+        <table border="1" bordercolor="grey" 
+        align="center" cellspaing="4" cellpadding="6">
+        <caption>
+            <h3>用户信息</h3>
+        </caption>
+        <tr bgcolor="#c8cfc4" align="center">
+            <th width="10%">用户ID</th>
+            <th width="15%">用户名</th>
+            <th width="8%">性别</th>
+            <th width="15%">生日</th>
+            <th width="15%">手机号码</th>
+            <th width="25%">地址</th>
+            <th width="*%">操作</th>
+        </tr>
+        <tr align="center">
+            <td>07</td>
+            <td>张一</td>
+            <td>女</td>
+            <td>2005-10-16</td>
+            <td>15987546612</td>
+            <td>辽宁省大连市</td>
+            <td>
+                <button onClick="javascript:window.open('userDetail.html','_blank','width=600,height=500,top=100,left=300')">
+                    详情</button>
+                    &nbsp;&nbsp;
+                    <button class="delBtn">删除</button>
+            </td>
+        </tr>
+        <tr align="center">
+            <td>08</td>
+            <td>李二</td>
+            <td>女</td>
+            <td>2004-07-18</td>
+            <td>13150245886</td>
+            <td>辽宁省沈阳市</td>
+            <td>
+                <button onClick="javascript:window.open('userDetail2.html','_blank','width=600,height=500,top=100,left=300')">
+                    详情</button>
+                    &nbsp;&nbsp;
+                    <button class="delBtn">删除</button>
+            </td>
+       </table>
+      </form>
+    </body>
+</html>

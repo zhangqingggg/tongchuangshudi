@@ -1,0 +1,30 @@
+/* 超级链接的CSS样式 */
+.hyperlink {
+	/* 去掉超级链接的下划线 */
+	text-decoration:none;
+}
+
+/*
+:link：表示对未访问的超链接应用样式。（只对超链接标签起作用，对其他标签无效。）
+:visited：表示对已访问的超链接应用样式。（只对超链接标签起作用，对其他标签无效。）
+:hover：表示对鼠标所停留的元素应用样式。
+:active：表示对用户正在单击的元素应用样式。
+有书写次序，“先爱后恨”。L(:link;)oV(:visited)e, H(:hover)A(:active)te。
+（1）:hover伪类必须定义在:link和:visited两个伪类之后。（:hover第3个）
+（2）:active伪类必须定义在:hover之后。（:active第4个）
+*/
+
+/* 伪类，未点击超级链接时的文字颜色 */
+a:link {
+	color:orange;
+}  	
+
+/* 伪类，访问过超级链接后的文字颜色 */
+a:visited {
+	color:green;
+}
+
+/* 伪类，光标移至超级链接上方时的文字颜色 */
+a:hover {
+	color:red;
+}

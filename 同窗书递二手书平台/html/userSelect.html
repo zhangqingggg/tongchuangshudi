@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>用户查询</title>
+    <link href="../css/controls.css" rel="stylesheet"
+    type="text/css">
+</head>
+<body class="bg">
+    <form name="frmUserSelect" method="post">
+        <table align="center" border="1" width="300" 
+        height="200">
+        <caption>
+            <h3>用户查询</h3>
+        </caption>
+        <tr>
+            <td width="20%" align="center">用户ID</td>
+            <td width="">
+                <input type="text" name="txtUserId"
+                size="20" maxlength="20">
+            </td>
+        </tr>
+        <tr>
+            <td align="center">用户名</td>
+            <td>
+                <input type="text" name="txtUserName"
+                size="20" maxlength="20">
+            </td>
+        </tr>
+        <tr>
+            <td align="center">性别</td>
+            <td>
+                <input type="radio" name="rdoSex" value="0" checked>男
+                <input type="radio" name="rdoSex" value="1" checked>女
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="center">
+                <input type="button" name="btnSelect"
+                value="查询" onClick="javascript:window.open('userDelete.html','_blank','width=1100,height=300,top=100,left=100')">
+                &nbsp;&nbsp;
+                <input type="reset" name="btnReset" value="重置">
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

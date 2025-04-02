@@ -1,0 +1,116 @@
+/* 购物车的样式文件  */
+
+/* 全局样式 */
+* {
+    margin:0px;         /* 外边距 */
+    padding:0px;        /* 内边距 */
+}
+
+/* 正文的样式 */
+body {
+    width:840px;        /* 宽度 */
+    margin:0px auto;    /* 外边距 */
+}
+
+/* 浮动方式 */
+.left {
+    float:left;         /* 向左浮动 */
+}
+.right {
+    float:right;        /* 向右浮动 */
+}
+
+/* 购物车开头部分的样式 */
+.header {
+    height:40px;              /* 高度 */
+    line-height: 40px;        /* 行高 */
+    background-color:pink;  /* 背景色 */
+    font-family: "黑体";       /* 字体 */
+    font-size: 20px;           /* 文字大小 */
+    margin-top: 2px;           /* 上面外边距 */
+    margin-bottom: 5px;        /* 下面外边距 */
+}
+.header p {
+    margin:0px 10px;           /* 上下和左右外边距 */
+}
+
+/* “已选商品”的样式 */
+.choice {
+    color:red;              /* 文字颜色 */
+    font-weight: bold;         /* 文字粗细 */
+}
+
+/* 表格的样式 */
+.tableItem {
+    width: 840px;                     /* 宽度 */
+    font-size: 12px;                  /* 字体大小 */
+    border-top: 1px solid grey;     /* 上边框 */
+    border-bottom: 1px solid grey;  /* 下边框 */
+    text-align: center;               /* 文字水平对齐方式 */
+    border-collapse: collapse;        /* 边框合并为一条 */
+}
+
+/* 表格第2列的宽度 */
+.tableItem tr th:nth-child(2) {
+    width:20%
+}
+
+/* 表格第3列的宽度 */
+.tableItem tr th:nth-child(3) {
+    width:25%
+}
+
+/* 表格第1行的样式*/
+.tableItem tr:first-child {
+    background-color: #d8d5d5;
+    height:40px;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 1px solid grey;
+}
+
+/* 表格偶数行的背景色设置 */
+/* .tableItem tr:nth-child(2n) { */
+.tableItem tr:nth-child(even) {
+    background-color: antiquewhite;
+}
+
+/* 表格中的图片大小设置 */
+.tableItem tr td img {
+    width:50%;
+    height:50%;
+}
+
+/* +、-按钮的样式 */
+.minusBtn,.addBtn {
+    width:20px;
+}
+
+/* 删除按钮的样式 */
+.deleteBtn {
+    border: 0;
+    outline: none;      /* 去除边框线 */
+    font-size: 12px;
+    width:30px;
+    font-weight: bolder;
+}
+.deleteBtn:hover {
+    color:red;
+}
+
+/* 数值的样式 */
+.totalNum,.tempNum,.unitPrice,.tempPrice,.totalPrice {
+    color:blue;
+    font-weight: bolder;
+}
+
+/* 结算按钮的样式 */
+.calBtn {
+    width: 100px;
+    height:40px;
+    color:white;
+    background-color: red;
+    border:0;
+    outline: none;      /* 去除边框线 */
+    border-radius: 5px; /* 圆角边框 */
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link href="../css/controls.css"
+    rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+    function validate() {
+        var userName=window.document.frmLogin.txtUserName.value;
+        if(userName=="" || userName == null){
+            window.alert("请输入用户名！");
+            window.document.frmLogin.txtUserName.focus();
+            return false;
+        }
+        var pwd=document.forms[0].txtPassword.value;
+        if(pwd == "" || pwd == null){
+            alert("请输入密码！");
+            document.forms[0].txtPassword.focus();
+            return false;
+        }
+        var i=document.forms["frmLogin"].rdoActor.value;
+        if(i==0){
+            window.document.location.href="admin.html";
+        }else if(i==1){
+            document.location.href="index.html";
+        }
+    }
+</script>
+</head>
+<body class="bg">
+    <div>
+        <form name="frmLogin" method="post">
+            <table border="1" align="center" bordercolor="green"
+                width="400" height="200">
+            <caption>
+                <h3>登录</h3>
+            </caption>
+            <tr height="25%">
+                <td>用户名：</td>
+                <td>
+                    <input type="text" name="txtUserName"
+                        size="20 maxlength="20" class="txt1">
+                    <font color="red" size="5">*</font>
+                </td>
+            </tr>
+            <tr height="25%">
+                <td>密码：</td>
+                <td>
+                    <input type="password" name="txtPassword"
+                        size="20" maxlength="20" class="txt1">
+                    <span style="color:red;font-size: 26px;">
+                        *
+                    </span>
+                </td>
+            </tr>
+            <tr height="25%">
+                <td>角色：</td>
+                <td>
+                    <input type="radio" name="rdoActor"
+                        value="0" checked>管理员
+                    <input type="radio" name="rdoActor"
+                        value="1">普通用户
+                </td>
+            </tr>
+            <tr height="25%">
+                <td colspan="2" align="center">
+                <input type="button" name="btnLogin"
+                    value="登录" class="btn1" onClick="validate()">
+                &nbsp;&nbsp;
+                <input type="reset" name="btnReset"
+                    value="重置" class="btn1">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div align="center">
+        <br>
+            <a href="regist.html" target="_blank">
+                注册
+            </a>
+            &nbsp;&nbsp;
+            <a href="changePassword.html" target="_blank">
+                修改密码
+            </a>
+            &nbsp;&nbsp;
+            <a href="findPassword.html" target="_blank">
+                找回密码
+            </a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <link href="../css/controls.css"
+    rel="stylesheet" type="text/css">
+    <style type="text/css">
+        * {
+            color:#009F95;
+        }
+    </style>
+    <script type="text/javascript">
+        function validate(){
+            var userName=window.document.frmRegist.txtUserName.value;
+            if(userName == "" || userName == null){
+                window.alert("请输入用户名！");
+                window.document.frmRegist.txtUserName.focus();
+                return false;
+            }
+            var pwd1=document.forms[0].txtPassword1.value;
+        if(pwd1 == "" || pwd1 == null){
+            alert("请输入密码！");
+            document.forms[0].txtPassword1.focus();
+            return false;
+        }
+        var pwd2=document.forms[0].txtPassword2.value;
+        if(pwd2 == "" || pwd2 == null){
+            alert("请输入确认密码！");
+            document.forms[0].txtPassword2.focus();
+            return false;
+        }
+        if(pwd1 != pwd2){
+            alert("两次密码输入不一致，请重新输入");
+            document.forms[0].txtPassword1.focus();
+            return false;
+        }
+        var num=document.forms["frmRegist"].txtNumber.value;
+        if (num != "" && num != null){
+            var pattern=/^\d{6}$/;
+            if(!pattern.test(num)){
+                alert("请输入正确的邮政编码");
+                document.frmRegist.txtNumber.focus();
+                return false;
+            }
+        }
+        alert("注册成功");
+        return true;
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <form name="frmRegist" method="post">
+            <table align="center" border="1" class="bg"
+            dordercolor="green" width="650" height="450">
+            <caption>
+                <h3>注册</h3>
+            </caption>
+            <tr>
+                <td>用户名：</td>
+                <td>
+                    <input type="text" name="txtUserName"
+                    size="20" maxlength="20" class="txt2">
+                    <span style="color:red;font-size:20px;">*</span>
+                </td>
+                </tr>
+                <tr>
+                    <td>密码：</td>
+                    <td>
+                        <input type="password" name="txtPassword1"
+                        size="20" maxlength="20" class=txt2>
+                        <span style="color:red;font-size:20px;">*</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>确认密码：</td>
+                    <td>
+                        <input type="password" name="txtPassword2"
+                        size="20 " maxlength="20" class="txt2">
+                        <span style="color:red;font-size:20px;">*</span>
+                    </td>
+                    </tr>
+                    <tr>
+                        <td>性别:</td>
+                        <td>
+                            <input type="radio" name="rdoSex"
+                            value="0" checked>男
+                            <input type="radio" name="rdoSex"
+                            value="1" checked>女 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>出生日期：</td>
+                        <td>
+                            <input type="date" name="birthday">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>电子邮箱：</td>
+                        <td>
+                            <input type="email" name="myEmail" class="txt2">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>个人网站：</td>
+                        <td>
+                            <input type="url" name="myUrl" class="txt2">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>爱好：</td>
+                        <td>
+                            <input type="checkbox" name="chkHobby" value="1">运动
+                            <input type="checkbox" name="chkHobby" value="2">美食
+                            <input type="checkbox" name="chkHobby" value="3">读书
+                            <input type="checkbox" name="chkHobby" value="4">旅游
+                            <input type="checkbox" name="chkHobby" value="5">音乐
+                            <input type="checkbox" name="chkHobby" value="6">其他
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>职业：</td>
+                        <td>
+                            <select name="profession" class="txt2">
+                                <option value="0"></option>
+                                <option value="1">医生</option>
+                                <option value="2">军人</option>
+                                <option value="3">教师</option>
+                                <option value="4">农民</option>
+                                <option value="5">工人</option>
+                                <option value="6">其他</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>上传照片：</td>
+                        <td>
+                            <input type="file" name="photoes" size="30">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>邮政编码：</td>
+                        <td>
+                            <input type="text" name="txtNumber" size="6"
+                            maxlength="6" class="txt2">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>家庭住址：</td>
+                        <td>
+                            <textarea name="address" cols="60" rows="6" class="txt2"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="button" name="btnRegist"
+                            value="注册" class="btn2" onclick="validate()"> 
+                            <input type="reset" name="btnReset" value="重置"
+                            class="btn2">                        
+                        </td>
+                    </tr>
+                </table>
+            </form>
+    </div>
+</body>
+</html>

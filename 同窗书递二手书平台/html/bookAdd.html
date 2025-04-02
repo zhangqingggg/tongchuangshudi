@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图书添加</title>
+    <link href="../css/controls.css"
+    rel="stylesheet" type="text/css">
+    <script type="text/javascript">
+    function validate() {
+        var bookName=window.document.frmBookAdd.txtBookName.value;
+        if(bookName=="" || bookName == null){
+            window.alert("请输入书名！");
+            window.document.frmBookAdd.txtBookName.focus();
+            return false;
+        }
+        var author=window.document.frmBookAdd.txtAuthor.value;
+        if(author=="" || author == null){
+            window.alert("请输入作者名字！");
+            window.document.frmBookAdd.txtAuthor.focus();
+            return false;
+        }
+        alert("添加成功！");
+        return true;
+    }
+</script>
+</head>
+<body class="bg">
+    <div>
+        <form name="frmBookAdd" method="post">
+            <table border="1" align="center"
+                width="600" height="200">
+            <caption>
+                <h3>图书添加</h3>
+            </caption>
+            <tr>
+                <td width="20%">ISBN:</td>
+                <td width="*">
+                    <input type="text" name="txtIsbn"
+                        size="18" readonly 
+                        value="978-7-302-47047-2">
+                </td>
+            </tr>
+            <tr>
+                <td>书名：</td>
+                <td>
+                    <input type="text" name="txtBookName"
+                        size="50" maxlength="50">
+                    <span style="color:red;font-size: 20px;">*</span>
+                </td>
+            </tr>
+            <tr>
+                <td>作者：</td>
+                <td>
+                    <input type="text" name="txtAuthor"
+                        size="30" maxlength="30">
+                    <span style="color:red;font-size: 20px;">*</span>
+                </td>
+            </tr>
+            <tr>
+                <td>定价</td>
+                <input type="number" name="price" 
+                min="0" max="1000">(人民币：元)
+                    </td>
+            </tr>
+            <tr>
+                <td>出版时间：</td>
+                <td>
+                    <input type="date" name="publishDate">
+                </td>
+            </tr>
+            <tr>
+                <td>出版社：</td>
+                <td>
+                    <select name="publisher">
+                        <option value="0"></option>
+                        <option value="1">清华大学出版社</option>
+                        <option value="2">人民教育出版社</option>
+                        <option value="3">外语教学与研究出版社</option>
+                        <option value="4">机械工业出版社</option>
+                        <option value="5">海燕出版社</option>
+                        <option value="6">其他</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>封皮：</td>
+                <td>
+                    <input type="file" name="envelope">
+                </td>
+            </tr>
+            <tr>
+                <td>目录：</td>
+                <td>
+                    <textarea name="catalog" cols="60"
+                    rows="8"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="button" name="btnAdd"
+                    value="添加" onclick="validate()">
+                    <input type="reset" name="btnReset"
+                    value="重置">
+                </td>
+            </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>
